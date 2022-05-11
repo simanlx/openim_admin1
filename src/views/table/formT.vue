@@ -1,16 +1,20 @@
+<!-- 科室 -->
 <template>
   <div class="app-container">
+    <el-input v-model="input" style="width:15vw" placeholder="请输入内容"></el-input>
+    <el-button type="primary" plain>搜索</el-button>
+    <el-button type="primary" plain>新增科室</el-button>
     <el-table v-loading="listLoading" :data="list" element-loading-text="Loading" border fit highlight-current-row>
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
           {{ scope.$index }}
         </template>
       </el-table-column>
-      <el-table-column label="姓名">
+      <!-- <el-table-column label="姓名">
         <template slot-scope="scope">
           {{ scope.row.title }}
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column label="科室" width="110" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.author }}</span>

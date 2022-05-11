@@ -1,5 +1,9 @@
+<!-- 通讯录 -->
 <template>
   <div class="app-container">
+    <el-input v-model="input" style="width:15vw" placeholder="请输入内容"></el-input>
+    <el-button type="primary" plain>搜索</el-button>
+    <el-button type="primary" plain>新增人员</el-button>
     <el-table v-loading="listLoading" :data="list" element-loading-text="Loading" border fit highlight-current-row>
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">

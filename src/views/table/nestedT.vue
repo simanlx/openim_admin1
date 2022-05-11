@@ -1,12 +1,14 @@
+<!-- 群组 -->
 <template>
   <div class="app-container">
+    <el-button type="primary" plain>新增群组</el-button>
     <el-table v-loading="listLoading" :data="list" element-loading-text="Loading" border fit highlight-current-row>
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
           {{ scope.$index }}
         </template>
       </el-table-column>
-      <el-table-column label="姓名">
+      <el-table-column label="群组">
         <template slot-scope="scope">
           {{ scope.row.title }}
         </template>
@@ -30,7 +32,7 @@
         </template>
       </el-table-column>
       <el-table-column align="center" prop="created_at" label="操作" width="200">
-        <template slot-scope="scope">
+        <template >
           <el-button type="danger" icon="el-icon-delete" circle></el-button>
           <el-button type="primary" icon="el-icon-edit" circle></el-button>
           <!-- <i class="el-icon-time" /> -->
